@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="libs\libDevitorNative.dylib">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>libDevitorNative.dylib</Link>
+      <Pack>true</Pack>
+    </EmbeddedResource>
+    <EmbeddedResource Include="libs\libDevitorNative.so">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>libDevitorNative.so</Link>
+      <Pack>true</Pack>
+    </EmbeddedResource>
+    <EmbeddedResource Include="libs\DevitorNative.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>DevitorNative.dll</Link>
+      <Pack>true</Pack>
+    </EmbeddedResource>
+    <EmbeddedResource Include="libs\WebView2Loader.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Link>WebView2Loader.dll</Link>
+      <Pack>true</Pack>
+    </EmbeddedResource>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+	<PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+	<PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Core\Services\" />
+  </ItemGroup>
+  
+</Project>
